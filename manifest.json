@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Sorting Visualizer",
+  "version": "1.0",
+  "description": "Watch how sorting algorithms work, step by step.",
+  "action": { "default_title": "Open Sorting Visualizer" },
+  "background": { "service_worker": "background.js" }
+}

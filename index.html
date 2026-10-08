@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sorting Visualizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Sorting Visualizer</h1>
+  <p class="sub">Pick an algorithm, press Sort, and watch how it puts the bars in order.</p>
+
+  <section class="panel" aria-label="Visualizer">
+    <div class="controls">
+      <div class="algos" id="algos" role="group" aria-label="Algorithm"></div>
+    </div>
+    <div class="controls">
+      <button class="go" id="sort">Sort</button>
+      <button id="stop" disabled>Stop</button>
+      <button id="shuffle">New array</button>
+      <label>Size <input type="range" id="size" min="10" max="120" value="50"></label>
+      <label>Speed <input type="range" id="speed" min="1" max="100" value="60"></label>
+    </div>
+
+    <div id="stage" role="img" aria-label="Array shown as vertical bars"></div>
+    <div class="legend">
+      <span><i style="background:var(--bar)"></i>Unsorted</span>
+      <span><i style="background:var(--cmp)"></i>Comparing</span>
+      <span><i style="background:var(--act)"></i>Moving or pivot</span>
+      <span><i style="background:var(--done)"></i>In place</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b id="comps">0</b><span>Comparisons</span></div>
+      <div class="stat"><b id="writes">0</b><span>Swaps and writes</span></div>
+      <div class="stat"><b id="time">0.0s</b><span>Elapsed</span></div>
+    </div>
+
+    <div id="info" aria-live="polite"></div>
+  </section>
+
+  <footer>Built with plain HTML, CSS and JavaScript. No libraries needed.</footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
